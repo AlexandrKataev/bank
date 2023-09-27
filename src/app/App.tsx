@@ -1,10 +1,15 @@
-import './App.css';
+import { Header } from '@layouts';
+import './App.scss';
+import { CurrentCard } from '@entities';
 
 function App() {
   return (
-    <>
-      <h1>Bank</h1>
-    </>
+    <div className="container">
+      <Header />
+      <div className="homepage">
+        <CurrentCard />
+      </div>
+    </div>
   );
 }
 

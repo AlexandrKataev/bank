@@ -1,9 +1,12 @@
 @import './shared/styles/_normalize.scss';
 @import './shared/styles/_vars.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: 'Urbanist', sans-serif;
+
+  // line-height: 1.5;
+  // font-weight: 400;
   background-color: var(--color-background);
 
   font-synthesis: none;

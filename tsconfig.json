@@ -25,7 +25,8 @@
       "@entities": ["src/entities/index.ts"],
       "@features": ["src/features"],
       "@layouts": ["src/layouts"],
-      "@ui": ["src/shared/ui"]
+      "@ui": ["src/shared/ui"],
+      "@assets": ["src/assets"]
     }
   },
   "include": ["src"],

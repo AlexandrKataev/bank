@@ -12,6 +12,7 @@ export default defineConfig({
       '@features': path.resolve(__dirname, './src/features'),
       '@layouts': path.resolve(__dirname, './src/layouts'),
       '@ui': path.resolve(__dirname, './src/shared/ui'),
+      '@assets': path.resolve(__dirname, './src/assets'),
     },
   },
   plugins: [react()],
