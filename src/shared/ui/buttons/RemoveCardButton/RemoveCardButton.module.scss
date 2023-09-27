@@ -1,0 +1,16 @@
+.button {
+  display: flex;
+  padding: 0 32px;
+  font-weight: 500;
+  align-items: center;
+  width: 180px;
+  height: 62px;
+  border-radius: 31px;
+  border: none;
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-secondary);
+  font-size: 18px;
+  svg {
+    margin-left: auto;
+  }
+}
