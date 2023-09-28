@@ -1,0 +1,23 @@
+.menu {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  padding: 0 35px;
+  gap: 25px;
+  &:hover {
+    opacity: 0.95;
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background-color: var(--color-background);
+    border-radius: 31px;
+  }
+  .arrow {
+    margin-left: auto;
+  }
+}

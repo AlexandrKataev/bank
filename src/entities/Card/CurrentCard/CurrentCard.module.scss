@@ -75,37 +75,3 @@
     }
   }
 }
-
-.menuwrapper {
-  box-shadow: 0 -40px 40px 0 rgb(236, 236, 236);
-
-  padding: 20px 35px 0 35px;
-  width: 465px;
-  font-size: 18px;
-  font-weight: 500;
-}
-.menu {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-  padding: 0 35px;
-  gap: 25px;
-  .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    background-color: var(--color-background);
-    border-radius: 31px;
-  }
-  .arrow {
-    margin-left: auto;
-  }
-}
-
-.buttons {
-  margin-top: 20px;
-  display: flex;
-  gap: 14px;
-}

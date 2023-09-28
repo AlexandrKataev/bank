@@ -3,8 +3,13 @@
   align-items: center;
   justify-content: center;
   border: none;
+  cursor: pointer;
   svg {
     margin-left: auto;
+  }
+
+  &:hover {
+    opacity: 0.95;
   }
 }
 

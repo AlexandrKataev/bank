@@ -1,15 +1,6 @@
-import {
-  CardIcon,
-  EditIcon,
-  PinIcon,
-  SecurityIcon,
-  MasterCardIcon,
-  ArrowIcon,
-  Button,
-  PlusIcon,
-  MinusIcon,
-} from '@ui';
+import { MasterCardIcon, Button } from '@ui';
 import styles from './CurrentCard.module.scss';
+import { CardMenu } from './CardMenu';
 
 export const CurrentCard = () => {
   return (
@@ -28,41 +19,7 @@ export const CurrentCard = () => {
           <Button title="CCV" variant="gray" height={32} width={65} fontSize={14} />
         </div>
       </div>
-      <div className={styles.menuwrapper}>
-        <div className={styles.menu}>
-          <div className={styles.icon}>
-            <CardIcon />
-          </div>
-          <div>Show Card Details</div>
-          <ArrowIcon className={styles.arrow} />
-        </div>
-        <div className={styles.menu}>
-          <div className={styles.icon}>
-            <PinIcon />
-          </div>
-          <div>Your PIN</div>
-          <ArrowIcon className={styles.arrow} />
-        </div>
-        <div className={styles.menu}>
-          <div className={styles.icon}>
-            <SecurityIcon />
-          </div>
-          <div>Security Code</div>
-          <ArrowIcon className={styles.arrow} />
-        </div>
-        <div className={styles.menu}>
-          <div className={styles.icon}>
-            <EditIcon />
-          </div>
-          <div>Edit Limits</div>
-          <ArrowIcon className={styles.arrow} />
-        </div>
-      </div>
-
-      <div className={styles.buttons}>
-        <Button title="Add Card" width={180} height={62} variant="primary" icon={<PlusIcon />} />
-        <Button title="Remove" width={180} height={62} variant="secondary" icon={<MinusIcon />} />
-      </div>
+      <CardMenu />
     </div>
   );
 };
