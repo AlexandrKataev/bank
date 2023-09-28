@@ -1,5 +1,6 @@
 import { ButtonHTMLAttributes, ReactElement } from 'react';
 import styles from './Button.module.scss';
+import clsx from 'clsx';
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
@@ -13,13 +14,14 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = ({ title, width, height, variant, icon, fontSize }: IButtonProps) => {
   return (
     <button
-      className={
+      className={clsx(
+        styles.button,
         variant === 'primary'
           ? styles.primary
           : variant === 'secondary'
           ? styles.secondary
-          : styles.gray
-      }
+          : styles.gray,
+      )}
       style={{
         width: `${width}px`,
         height: `${height}px`,

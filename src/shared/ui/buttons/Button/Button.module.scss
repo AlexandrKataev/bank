@@ -1,41 +1,27 @@
-.primary {
+.button {
   display: flex;
-  padding: 0 30px;
   align-items: center;
+  justify-content: center;
   border: none;
-  background-color: var(--color-main);
-  color: var(--color-text-white);
   svg {
     margin-left: auto;
   }
+}
+
+.primary {
+  padding: 0 30px;
+  background-color: var(--color-main);
+  color: var(--color-text-white);
 }
 
 .secondary {
-  display: flex;
   padding: 0 32px;
   font-weight: 500;
-  align-items: center;
-  border: none;
   background-color: var(--color-background-secondary);
   color: var(--color-text-secondary);
-  svg {
-    margin-left: auto;
-  }
 }
 
 .gray {
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-  justify-content: center;
-  // border-radius: 16px;
-  border: none;
-  // font-size: 14px;
   background-color: var(--color-background-gray);
   color: var(--color-text-white);
-  // width: 65px;
-  // height: 32px;
-  svg {
-    margin-left: auto;
-  }
 }

@@ -4,7 +4,6 @@ import {
   PinIcon,
   SecurityIcon,
   MasterCardIcon,
-  CCVButton,
   ArrowIcon,
   Button,
   PlusIcon,
