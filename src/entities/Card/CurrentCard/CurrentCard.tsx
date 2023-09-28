@@ -1,6 +1,4 @@
 import {
-  AddCardButton,
-  RemoveCardButton,
   CardIcon,
   EditIcon,
   PinIcon,
@@ -8,6 +6,9 @@ import {
   MasterCardIcon,
   CCVButton,
   ArrowIcon,
+  Button,
+  PlusIcon,
+  MinusIcon,
 } from '@ui';
 import styles from './CurrentCard.module.scss';
 
@@ -25,7 +26,7 @@ export const CurrentCard = () => {
         </div>
         <div className={styles.cardinfo}>
           <div className={styles.number}>0123 4567 8910</div>
-          <CCVButton />
+          <Button title="CCV" variant="gray" height={32} width={65} fontSize={14} />
         </div>
       </div>
       <div className={styles.menuwrapper}>
@@ -60,8 +61,8 @@ export const CurrentCard = () => {
       </div>
 
       <div className={styles.buttons}>
-        <AddCardButton />
-        <RemoveCardButton />
+        <Button title="Add Card" width={180} height={62} variant="primary" icon={<PlusIcon />} />
+        <Button title="Remove" width={180} height={62} variant="secondary" icon={<MinusIcon />} />
       </div>
     </div>
   );
