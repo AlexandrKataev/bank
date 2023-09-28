@@ -5,18 +5,31 @@ export const CardIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
     <svg
       {...props}
       width={'20px'}
-      fill={'var(--color-text-gray)'}
       viewBox="0 0 24 24"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <path
-        d="M4 9C4 8.44772 4.44772 8 5 8H9C9.55228 8 10 8.44772 10 9C10 9.55228 9.55228 10 9 10H5C4.44772 10 4 9.55228 4 9Z"
-        fill={'var(--color-text-gray)'}
+        d="M2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12C22 15.7712 22 17.6569 20.8284 18.8284C19.6569 20 17.7712 20 14 20H10C6.22876 20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12Z"
+        stroke={'var(--color-text-gray)'}
+        stroke-width="1.5"
       />
       <path
-        clip-rule="evenodd"
-        d="M4 3C1.79086 3 0 4.79086 0 7V17C0 19.2091 1.79086 21 4 21H20C22.2091 21 24 19.2091 24 17V7C24 4.79086 22.2091 3 20 3H4ZM20 5H4C2.89543 5 2 5.89543 2 7V14H22V7C22 5.89543 21.1046 5 20 5ZM22 16H2V17C2 18.1046 2.89543 19 4 19H20C21.1046 19 22 18.1046 22 17V16Z"
-        fill={'var(--color-text-gray)'}
-        fill-rule="evenodd"
+        d="M10 16H6"
+        stroke={'var(--color-text-gray)'}
+        stroke-width="1.5"
+        stroke-linecap="round"
+      />
+      <path
+        d="M14 16H12.5"
+        stroke={'var(--color-text-gray)'}
+        stroke-width="1.5"
+        stroke-linecap="round"
+      />
+      <path
+        d="M2 10L22 10"
+        stroke={'var(--color-text-gray)'}
+        stroke-width="1.5"
+        stroke-linecap="round"
       />
     </svg>
   );
