@@ -46,3 +46,10 @@
   color: var(--color-text-gray);
   background-color: var(--color-background-white);
 }
+
+.menuitem {
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+}

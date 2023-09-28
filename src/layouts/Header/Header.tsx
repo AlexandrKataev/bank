@@ -19,7 +19,7 @@ export const Header = () => {
       </div>
       <div className={styles.navbar}>
         {nav.map((el) => {
-          return <div className="">{`${el}`}</div>;
+          return <div className={styles.menuitem}>{`${el}`}</div>;
         })}
       </div>
     </div>
