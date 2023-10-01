@@ -188,7 +188,7 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -279,17 +279,17 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 
-[type='search'] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-
 [type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
+  appearance: none;
 }
 
 /**
@@ -338,4 +338,23 @@ template {
 
 [hidden] {
   display: none;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
 }

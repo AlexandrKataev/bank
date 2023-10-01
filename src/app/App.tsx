@@ -1,14 +1,13 @@
 import { Header } from '@layouts';
 import './App.scss';
-import { CurrentCard } from '@entities';
+
+import { Routing } from './Routing';
 
 function App() {
   return (
     <div className="container">
       <Header />
-      <div className="homepage">
-        <CurrentCard />
-      </div>
+      <Routing />
     </div>
   );
 }

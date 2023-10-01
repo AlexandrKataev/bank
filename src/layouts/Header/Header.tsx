@@ -2,14 +2,26 @@ import { Logo } from '@ui';
 import styles from './Header.module.scss';
 
 import userPhoto from '../../shared/assets/user-photo.png';
+import { NavLink } from 'react-router-dom';
 
 const name: string = 'Alexander';
 
-const nav: string[] = ['Summary', 'Cards', 'Activity', 'Recipients', 'Help Center', 'Earn Gifts'];
+interface Link {
+  title: string;
+  link: string;
+}
+const nav: Link[] = [
+  { title: 'Summary', link: '/' },
+  { title: 'Cards', link: '/cards' },
+  { title: 'Activity', link: '/activity' },
+  { title: 'Recipients', link: '/recipients' },
+  { title: 'Help Center', link: '/help' },
+  { title: 'Earn Gifts', link: '/gifts' },
+];
 
 export const Header = () => {
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       <Logo />
       <div className={styles.profile}>
         <span className={styles.greeting}>
@@ -19,9 +31,9 @@ export const Header = () => {
       </div>
       <div className={styles.navbar}>
         {nav.map((el) => {
-          return <div className={styles.menuitem}>{`${el}`}</div>;
+          return <NavLink to={el.link} className={styles.menuitem}>{`${el.title}`}</NavLink>;
         })}
       </div>
-    </div>
+    </header>
   );
 };

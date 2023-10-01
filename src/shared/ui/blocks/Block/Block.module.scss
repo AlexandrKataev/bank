@@ -1,0 +1,9 @@
+.block {
+  width: 600px;
+  height: 300px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: var(--color-background-white);
+}
