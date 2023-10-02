@@ -1,8 +1,6 @@
 import styles from './Block.module.scss';
 
-interface BlockProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: any;
-}
+interface BlockProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const Block = ({ children, style }: BlockProps) => {
   return (

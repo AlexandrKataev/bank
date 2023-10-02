@@ -1,0 +1,37 @@
+.head {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.contacts {
+  display: flex;
+  gap: 25px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 10px;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 2px var(--color-main) dashed;
+  border-radius: 30px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 30px;
+  background-image: url(../../shared/assets/user-photo.png);
+  background-size: contain;
+}

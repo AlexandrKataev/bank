@@ -19,4 +19,7 @@
 .buttons {
   display: flex;
   gap: 20px;
+  svg {
+    margin-left: 8px;
+  }
 }

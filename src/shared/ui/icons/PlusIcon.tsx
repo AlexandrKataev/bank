@@ -4,17 +4,13 @@ export const PlusIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
     <svg
       {...props}
-      width={'26px'}
-      viewBox="0 0 24 24"
-      fill="none"
+      fill={props.color || 'var(--color-text-black)'}
+      width={'15px'}
+      viewBox="0 0 52 52"
+      data-name="Layer 1"
+      id="Layer_1"
       xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M6 12H18M12 6V18"
-        stroke={props.color || 'var(--color-text-black)'}
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+      <path d="M50,24H28V2a2,2,0,0,0-4,0V24H2a2,2,0,0,0,0,4H24V50a2,2,0,0,0,4,0V28H50a2,2,0,0,0,0-4Z" />
     </svg>
   );
 };

@@ -1,19 +1,10 @@
-import { ButtonHTMLAttributes, ReactElement } from 'react';
 import styles from './ButtonUnderlined.module.scss';
 
-interface ButtonUnderlinedProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  title: string;
-
+interface ButtonUnderlinedProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   fontSize?: number;
-  icon?: ReactElement;
 }
 
-export const ButtonUnderlined = ({
-  title,
-
-  icon,
-  fontSize,
-}: ButtonUnderlinedProps) => {
+export const ButtonUnderlined = ({ children, fontSize }: ButtonUnderlinedProps) => {
   return (
     <button
       className={styles.button}
@@ -21,8 +12,7 @@ export const ButtonUnderlined = ({
         fontSize: fontSize ? `${fontSize}px` : '18px',
         height: `${(fontSize || 18) * 2}px`,
       }}>
-      <div>{title}</div>
-      {icon}
+      {children}
     </button>
   );
 };

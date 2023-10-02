@@ -1,14 +1,11 @@
-import { ButtonHTMLAttributes, ReactElement } from 'react';
 import styles from './Button.module.scss';
 import clsx from 'clsx';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  title: string;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   width: number;
   height: number;
   variant: 'primary' | 'secondary' | 'gray' | 'light';
   fontSize?: number;
-  icon?: ReactElement;
 }
 
 const colorTheme = {
@@ -18,7 +15,7 @@ const colorTheme = {
   light: styles.light,
 };
 
-export const Button = ({ title, width, height, variant, icon, fontSize }: ButtonProps) => {
+export const Button = ({ width, height, variant, fontSize, children, style }: ButtonProps) => {
   return (
     <button
       className={clsx(styles.button, colorTheme[variant])}
@@ -27,9 +24,9 @@ export const Button = ({ title, width, height, variant, icon, fontSize }: Button
         height: `${height}px`,
         borderRadius: `${height / 2}px`,
         fontSize: fontSize ? `${fontSize}px` : '18px',
+        ...style,
       }}>
-      <div>{title}</div>
-      {icon}
+      {children}
     </button>
   );
 };

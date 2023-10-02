@@ -11,15 +11,18 @@ export const Balance = () => {
         <span className={styles.valute}>USD</span>
       </div>
       <div className={styles.buttons}>
-        <Button
-          height={50}
-          width={150}
-          title="Send"
-          variant="primary"
-          icon={<ArrowUpIcon color="var(--color-text-white)" />}
-        />
-        <Button height={50} width={150} title="Request" variant="light" icon={<ArrowDownIcon />} />
-        <Button height={50} width={150} title="Top Up" variant="light" icon={<PlusIcon />} />
+        <Button height={50} width={150} variant="primary">
+          Send
+          <ArrowUpIcon color="var(--color-text-white)" />
+        </Button>
+        <Button height={50} width={150} variant="light">
+          Request
+          <ArrowDownIcon />
+        </Button>
+        <Button height={50} width={150} variant="light">
+          Top Up
+          <PlusIcon />
+        </Button>
       </div>
     </Block>
   );
