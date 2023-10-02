@@ -6,11 +6,12 @@ import { NavLink } from 'react-router-dom';
 
 const name: string = 'Alexander';
 
-interface Link {
+interface NavLink {
   title: string;
   link: string;
 }
-const nav: Link[] = [
+
+const nav: NavLink[] = [
   { title: 'Summary', link: '/' },
   { title: 'Cards', link: '/cards' },
   { title: 'Activity', link: '/activity' },
@@ -22,16 +23,26 @@ const nav: Link[] = [
 export const Header = () => {
   return (
     <header className={styles.container}>
-      <Logo />
-      <div className={styles.profile}>
-        <span className={styles.greeting}>
-          Welcome back, <b>{`${name}!`}</b>
-        </span>
-        <img src={userPhoto} />
+      <div className={styles.header}>
+        <Logo />
+        <div className={styles.profile}>
+          <span className={styles.greeting}>
+            Welcome back, <b>{`${name}!`}</b>
+          </span>
+          <img src={userPhoto} />
+        </div>
       </div>
+
       <div className={styles.navbar}>
         {nav.map((el) => {
-          return <NavLink to={el.link} className={styles.menuitem}>{`${el.title}`}</NavLink>;
+          return (
+            <NavLink
+              to={el.link}
+              style={({ isActive }) => {
+                return { fontWeight: isActive ? 600 : 400 };
+              }}
+              className={styles.menuitem}>{`${el.title}`}</NavLink>
+          );
         })}
       </div>
     </header>

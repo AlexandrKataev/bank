@@ -7,3 +7,6 @@ export * from './PinIcon.tsx';
 export * from './SecurityIcon.tsx';
 export * from './MasterCardIcon.tsx';
 export * from './ArrowIcon.tsx';
+export * from './ArrowRightIcon.tsx';
+export * from './ClickIcon.tsx';
+export * from './ArrowUpIcon';

@@ -1,0 +1,23 @@
+.title {
+  color: var(--color-text-gray);
+  font-size: 20px;
+}
+
+.total {
+  margin-top: 20px;
+  .sum {
+    font-size: 70px;
+    font-weight: 500;
+  }
+
+  .valute {
+    font-size: 20px;
+    color: var(--color-text-light);
+    margin-left: 20px;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
