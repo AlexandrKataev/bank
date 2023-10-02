@@ -3,7 +3,7 @@ import moneyImage from '../../shared/assets/money.png';
 
 import { CurrentCard } from '@entities';
 import { ArrowRightIcon, Block, ButtonUnderlined, ClickIcon } from '@ui';
-import { Balance } from '@widgets';
+import { Balance, Invite } from '@widgets';
 
 export const Home = () => {
   return (
@@ -25,8 +25,10 @@ export const Home = () => {
           </div>
         </Block>
       </div>
-
-      <Balance />
+      <div className={styles.content}>
+        <Balance />
+        <Invite />
+      </div>
     </div>
   );
 };

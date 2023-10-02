@@ -10,3 +10,4 @@ export * from './ArrowIcon.tsx';
 export * from './ArrowRightIcon.tsx';
 export * from './ClickIcon.tsx';
 export * from './ArrowUpIcon';
+export * from './ArrowDownIcon.tsx';

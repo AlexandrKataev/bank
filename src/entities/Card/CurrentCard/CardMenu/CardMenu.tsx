@@ -12,7 +12,13 @@ export const CardMenu = () => {
         <CardMenuItem title="Edit Limits" icon={<EditIcon />} />
       </div>
       <div className={styles.buttons}>
-        <Button title="Add Card" width={180} height={62} variant="primary" icon={<PlusIcon />} />
+        <Button
+          title="Add Card"
+          width={180}
+          height={62}
+          variant="primary"
+          icon={<PlusIcon color="var(--color-text-white)" />}
+        />
         <Button title="Remove" width={180} height={62} variant="secondary" icon={<MinusIcon />} />
       </div>
     </>
