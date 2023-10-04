@@ -9,11 +9,12 @@ export const Home = () => {
         <CurrentCard />
         <GetMoney />
       </div>
-      <div className={styles.content}>
-        <div className={styles.row1}>
+      <div className={styles.col}>
+        <div className={styles.first}>
           <Balance />
           <Invite />
         </div>
+
         <RecentContacts />
         <History />
       </div>

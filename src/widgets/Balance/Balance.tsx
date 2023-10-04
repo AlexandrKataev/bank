@@ -4,7 +4,11 @@ import { ArrowDownIcon, ArrowUpIcon, Block, BlockTitle, Button, PlusIcon } from 
 
 export const Balance = () => {
   return (
-    <Block style={{ maxWidth: '100%', height: '200px', flexGrow: 1, gap: '20px' }}>
+    <Block
+      style={{
+        minWidth: '50%',
+        gap: '20px',
+      }}>
       <BlockTitle>Total Balance</BlockTitle>
       <div className={styles.total}>
         <span className={styles.sum}>29,475.00</span>

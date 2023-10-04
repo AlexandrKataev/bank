@@ -1,23 +1,36 @@
 .homepage {
+  padding: 0 25px;
   display: grid;
-  grid-template-columns: 460px auto;
+  grid-template-columns: auto;
+  // grid-template-columns: 450px auto;
+  justify-content: center;
   gap: var(--gap);
+
+  @media (min-width: 1250px) {
+    grid-template-columns: 450px auto;
+    justify-content: stretch;
+  }
+}
+
+.col {
+  display: grid;
+  justify-content: stretch;
+  gap: 25px;
 }
 
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap);
+  display: grid;
+  gap: 25px;
 }
 
-.content {
+.first {
   display: flex;
   flex-direction: column;
-  gap: var(--gap);
-}
 
-.row1 {
-  display: flex;
-  gap: var(--gap);
-  flex-wrap: wrap;
+  gap: 25px;
+  @media (min-width: 1450px) {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+  }
 }

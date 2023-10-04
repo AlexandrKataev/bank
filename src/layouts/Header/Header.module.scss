@@ -1,8 +1,9 @@
 .container {
+  padding: 0 25px;
   height: 80px;
   margin: var(--gap) 0;
   display: grid;
-  grid-template-columns: 460px auto;
+  grid-template-columns: 450px auto;
   gap: var(--gap);
 
   svg {
