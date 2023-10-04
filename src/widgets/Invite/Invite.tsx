@@ -1,7 +1,7 @@
 import { Block, Button, CopyIcon } from '@ui';
 import styles from './Invite.module.scss';
 
-import background from '../../shared/assets/people.png';
+import background from '@assets/people.png';
 
 export const Invite = () => {
   return (

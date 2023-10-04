@@ -1,7 +1,7 @@
 import { ArrowRightIcon, Block, ButtonUnderlined, ClickIcon } from '@ui';
 import styles from './GetMoney.module.scss';
 
-import moneyImage from '../../shared/assets/money.png';
+import moneyImage from '@assets/money.png';
 
 export const GetMoney = () => {
   return (

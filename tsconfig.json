@@ -28,7 +28,8 @@
       "@features": ["src/features"],
       "@entities": ["src/entities"],
       "@ui": ["src/shared/ui"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/shared/assets/*"],
+      "@helpers": ["src/shared/helpers"]
     }
   },
   "include": ["src"],

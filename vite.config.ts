@@ -14,7 +14,8 @@ export default defineConfig({
       '@features': path.resolve(__dirname, './src/features'),
       '@entities': path.resolve(__dirname, './src/entities'),
       '@ui': path.resolve(__dirname, './src/shared/ui'),
-      '@assets': path.resolve(__dirname, './src/assets'),
+      '@assets': path.resolve(__dirname, './src/shared/assets'),
+      '@helpers': path.resolve(__dirname, './src/shared/helpers'),
     },
   },
   css: {

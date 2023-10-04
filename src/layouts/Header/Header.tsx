@@ -1,7 +1,7 @@
 import { Logo } from '@ui';
 import styles from './Header.module.scss';
 
-import userPhoto from '../../shared/assets/user-photo.png';
+import userPhoto from '@assets/user-photo.png';
 import { NavLink } from 'react-router-dom';
 
 const name: string = 'Alexander';
