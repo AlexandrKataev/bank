@@ -1,10 +1,13 @@
-export const Logo = () => {
+import { FC, SVGProps } from 'react';
+
+export const Logo: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
       width="80"
       height="80"
+      {...props}
       viewBox="0 0 3000.000000 3000.000000"
       preserveAspectRatio="xMidYMid meet">
       <g

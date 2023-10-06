@@ -1,4 +1,4 @@
-import { Logo } from '@ui';
+import { BurgerIcon, Logo } from '@ui';
 import styles from './Header.module.scss';
 
 import userPhoto from '@assets/user-photo.png';
@@ -24,7 +24,8 @@ export const Header = () => {
   return (
     <header className={styles.container}>
       <div className={styles.header}>
-        <Logo />
+        <Logo className={styles.logo} />
+        <BurgerIcon className={styles.burger} />
         <div className={styles.profile}>
           <span className={styles.greeting}>
             Welcome back, <b>{`${name}!`}</b>

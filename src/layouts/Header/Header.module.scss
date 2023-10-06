@@ -10,6 +10,7 @@
     min-width: 80px;
   }
 }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -68,6 +69,15 @@
     grid-template-columns: auto;
   }
   .navbar {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+}
+
+@media (width >= 1250px) {
+  .burger {
     display: none;
   }
 }

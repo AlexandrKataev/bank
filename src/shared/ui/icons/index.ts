@@ -12,3 +12,4 @@ export * from './ClickIcon.tsx';
 export * from './ArrowUpIcon';
 export * from './ArrowDownIcon.tsx';
 export * from './CopyIcon.tsx';
+export * from './BurgerIcon.tsx';
