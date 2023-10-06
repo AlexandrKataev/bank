@@ -7,10 +7,13 @@
 .contacts {
   overflow: hidden;
   white-space: nowrap;
+  display: flex;
   width: 100%;
 }
 .contact {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
   margin-left: 20px;
 
   font-size: 16px;
