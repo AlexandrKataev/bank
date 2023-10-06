@@ -4,7 +4,6 @@ import styles from './Header.module.scss';
 import userPhoto from '@assets/user-photo.png';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { useOutsideClick } from '@hooks';
 
 const name: string = 'Alexander';
 
@@ -27,11 +26,9 @@ export const Header = () => {
   const navigate = useNavigate();
 
   const onCLickPopup: React.MouseEventHandler<SVGSVGElement> = () => {
-    setPopup(true);
+    setPopup(!popup);
   };
-  const ref = useOutsideClick(() => {
-    setPopup(false);
-  });
+
   const onClickPopupItem = (link: string) => {
     setPopup(false);
     navigate(link);
@@ -42,8 +39,9 @@ export const Header = () => {
         <Logo className={styles.logo} />
 
         <BurgerIcon className={styles.burger} onClick={onCLickPopup} isOpened={popup} />
+
         {popup && (
-          <div className={styles.popup} ref={ref}>
+          <div className={styles.popup}>
             {nav.map((el) => {
               return (
                 <div className={styles.popupitem} onClick={() => onClickPopupItem(el.link)}>
