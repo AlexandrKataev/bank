@@ -7,6 +7,10 @@
   .sum {
     font-size: 75px;
     font-weight: 500;
+
+    @media (width < 600px) {
+      font-size: 60px;
+    }
   }
 
   .valute {

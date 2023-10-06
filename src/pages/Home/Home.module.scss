@@ -1,5 +1,5 @@
 .homepage {
-  padding: 0 25px;
+  padding: 0 0;
   display: grid;
   grid-template-columns: 1fr;
   align-items: start;
@@ -9,6 +9,7 @@
   @media (min-width: 1250px) {
     grid-template-columns: 450px auto;
     justify-content: stretch;
+    padding: 0 25px;
   }
 }
 
