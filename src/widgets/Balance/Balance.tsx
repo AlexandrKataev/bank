@@ -6,7 +6,7 @@ export const Balance = () => {
   return (
     <Block
       style={{
-        minWidth: '400px',
+        minWidth: '370px',
         flexGrow: 50,
         flexShrink: 1,
         gap: '20px',

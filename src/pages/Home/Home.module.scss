@@ -1,7 +1,7 @@
 .homepage {
   padding: 0 25px;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   align-items: start;
   justify-content: stretch;
   gap: var(--gap);
