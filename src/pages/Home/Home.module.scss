@@ -6,8 +6,8 @@
   justify-content: stretch;
   gap: var(--gap);
 
-  @media (min-width: 1250px) {
-    grid-template-columns: 450px auto;
+  @media (width > 1200px) {
+    grid-template-columns: minmax(350px, 450px) auto;
     justify-content: stretch;
     padding: 0 25px;
   }

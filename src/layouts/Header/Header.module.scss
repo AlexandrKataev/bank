@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   padding: 0 25px;
   height: 80px;
   margin: var(--gap) 0;
@@ -8,6 +9,30 @@
 
   svg {
     min-width: 80px;
+  }
+}
+.burger {
+  cursor: pointer;
+}
+.popup {
+  border-radius: 20px;
+  overflow: hidden;
+  font-size: 20px;
+  top: 90px;
+  left: 25px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.13);
+
+  .popupitem {
+    cursor: pointer;
+    padding: 25px 35px;
+    background-color: rgb(255, 255, 255);
+    &:hover {
+      background-color: rgb(248, 248, 248);
+    }
   }
 }
 
@@ -64,7 +89,7 @@
   }
 }
 
-@media (width < 1250px) {
+@media (width < 1200px) {
   .container {
     grid-template-columns: auto;
   }
@@ -76,7 +101,7 @@
   }
 }
 
-@media (width >= 1250px) {
+@media (width >= 1200px) {
   .burger {
     display: none;
   }

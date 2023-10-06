@@ -29,7 +29,8 @@
       "@entities": ["src/entities"],
       "@ui": ["src/shared/ui"],
       "@assets/*": ["src/shared/assets/*"],
-      "@helpers": ["src/shared/helpers"]
+      "@helpers": ["src/shared/helpers"],
+      "@hooks": ["src/shared/hooks"]
     }
   },
   "include": ["src"],
