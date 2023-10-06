@@ -6,7 +6,9 @@ export const Balance = () => {
   return (
     <Block
       style={{
-        minWidth: '50%',
+        minWidth: '400px',
+        flexGrow: 50,
+        flexShrink: 1,
         gap: '20px',
       }}>
       <BlockTitle>Total Balance</BlockTitle>
@@ -15,15 +17,15 @@ export const Balance = () => {
         <span className={styles.valute}>USD</span>
       </div>
       <div className={styles.buttons}>
-        <Button height={50} width={150} variant="primary">
+        <Button height={50} width={166} variant="primary" style={{ width: '33%', minWidth: '20%' }}>
           Send
           <ArrowUpIcon color="var(--color-text-white)" />
         </Button>
-        <Button height={50} width={150} variant="light">
+        <Button height={50} width={166} variant="light" style={{ width: '33%', minWidth: '20%' }}>
           Request
           <ArrowDownIcon />
         </Button>
-        <Button height={50} width={150} variant="light">
+        <Button height={50} width={166} variant="light" style={{ width: '33%', minWidth: '20%' }}>
           Top Up
           <PlusIcon />
         </Button>

@@ -7,9 +7,9 @@ export const Invite = () => {
   return (
     <Block
       style={{
-        maxWidth: '60%',
-        flexGrow: 1,
-
+        minWidth: '250px',
+        flexGrow: 0.9,
+        flexShrink: 15,
         backgroundImage: `url(${background})`,
         backgroundColor: 'var(--color-background-black)',
       }}>
@@ -17,9 +17,8 @@ export const Invite = () => {
         <div className={styles.text}>
           Invite a friend with code below and redeem special bonus USD 15 from us!
         </div>
-        <Button width={340} height={50} variant="gray">
+        <Button width={340} height={50} variant="gray" style={{ width: '350px' }}>
           <div className={styles.code}>ALEXANDERWRQRQ-SEP23</div>
-
           <div className={styles.icon}>
             <CopyIcon width="18px" color="var(--color-text-white)" />
           </div>

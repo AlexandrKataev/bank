@@ -2,8 +2,8 @@
   padding: 0 25px;
   display: grid;
   grid-template-columns: auto;
-  // grid-template-columns: 450px auto;
-  justify-content: center;
+  align-items: start;
+  justify-content: stretch;
   gap: var(--gap);
 
   @media (min-width: 1250px) {
@@ -14,7 +14,9 @@
 
 .col {
   display: grid;
+  grid-template-rows: auto auto auto;
   justify-content: stretch;
+  align-items: start;
   gap: 25px;
 }
 
@@ -25,12 +27,6 @@
 
 .first {
   display: flex;
-  flex-direction: column;
-
+  flex-wrap: wrap;
   gap: 25px;
-  @media (min-width: 1450px) {
-    display: flex;
-    align-items: stretch;
-    flex-direction: row;
-  }
 }
