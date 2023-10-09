@@ -27,7 +27,7 @@ export const RecentContacts = () => {
         </div>
         {contacts.map((el) => {
           return (
-            <div className={styles.contact}>
+            <div className={styles.contact} key={el.id}>
               <img className={styles.avatar} src={el.avatar} />
               <div style={{ color: 'var(--color-text-gray)' }}>{el.firstName}</div>
             </div>
