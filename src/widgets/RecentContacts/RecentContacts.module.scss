@@ -7,17 +7,22 @@
 .contacts {
   overflow: hidden;
   white-space: nowrap;
-  display: flex;
   gap: 32px;
+  display: flex;
   width: 100%;
 }
 .contact {
+  cursor: pointer;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   font-size: 16px;
   font-weight: 500;
   gap: 10px;
+
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 .add {
@@ -26,8 +31,6 @@
   align-items: center;
   width: 70px;
   height: 70px;
-  // border: 2px var(--color-main) dashed;
-  // border-radius: 35px;
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%236E468FFF' stroke-width='3' stroke-dasharray='9' stroke-dashoffset='86' stroke-linecap='butt'/%3e%3c/svg%3e");
   border-radius: 100px;
 }
@@ -36,6 +39,4 @@
   width: 70px;
   height: 70px;
   border-radius: 35px;
-  background-image: url(@assets/user-photo.png);
-  background-size: contain;
 }

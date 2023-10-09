@@ -30,7 +30,9 @@
       "@ui": ["src/shared/ui"],
       "@assets/*": ["src/shared/assets/*"],
       "@helpers": ["src/shared/helpers"],
-      "@hooks": ["src/shared/hooks"]
+      "@hooks": ["src/shared/hooks"],
+      "@models": ["src/shared/api/models"],
+      "@services": ["src/shared/api/services"]
     }
   },
   "include": ["src"],

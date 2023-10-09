@@ -17,6 +17,8 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, './src/shared/assets'),
       '@helpers': path.resolve(__dirname, './src/shared/helpers'),
       '@hooks': path.resolve(__dirname, './src/shared/hooks'),
+      '@models': path.resolve(__dirname, './src/shared/api/models'),
+      '@services': path.resolve(__dirname, './src/shared/api/services'),
     },
   },
   css: {

@@ -1,6 +1,9 @@
+import { formatNumToCash } from '@helpers';
 import styles from './Balance.module.scss';
 
 import { ArrowDownIcon, ArrowUpIcon, Block, BlockTitle, Button, PlusIcon } from '@ui';
+
+const total = 24579;
 
 export const Balance = () => {
   return (
@@ -13,7 +16,7 @@ export const Balance = () => {
       }}>
       <BlockTitle>Total Balance</BlockTitle>
       <div className={styles.total}>
-        <span className={styles.sum}>29,475.00</span>
+        <span className={styles.sum}>{formatNumToCash(total)}</span>
         <span className={styles.valute}>USD</span>
       </div>
       <div className={styles.buttons}>

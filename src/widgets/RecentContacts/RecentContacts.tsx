@@ -1,20 +1,17 @@
 import { Block, BlockShowMore, BlockTitle, PlusIcon } from '@ui';
 import styles from './RecentContacts.module.scss';
 
-const contacts = [
-  'Alexander',
-  'Polina',
-  'NAstya',
-  'Ilya',
-  'Damir',
-  'Artem',
-  'Artem S',
-  'Stas',
-  'Mom',
-  'Konstantin',
-];
+import { useEffect, useState } from 'react';
+import { Contact } from '@models';
+import { contactsService } from '@services';
 
 export const RecentContacts = () => {
+  const [contacts, setContacts] = useState([] as Contact[]);
+  useEffect(() => {
+    contactsService.getContacts().then((value) => {
+      setContacts(value);
+    });
+  }, []);
   return (
     <Block style={{ gap: '25px' }}>
       <div className={styles.head}>
@@ -31,8 +28,8 @@ export const RecentContacts = () => {
         {contacts.map((el) => {
           return (
             <div className={styles.contact}>
-              <div className={styles.avatar}></div>
-              <div style={{ color: 'var(--color-text-gray)' }}>{el}</div>
+              <img className={styles.avatar} src={el.avatar} />
+              <div style={{ color: 'var(--color-text-gray)' }}>{el.firstName}</div>
             </div>
           );
         })}
