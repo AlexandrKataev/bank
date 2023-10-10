@@ -1,10 +1,14 @@
+import { PropsWithChildren } from 'react';
 import styles from './ButtonUnderlined.module.scss';
 
-interface ButtonUnderlinedProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonUnderlinedProps {
   fontSize?: number;
 }
 
-export const ButtonUnderlined = ({ children, fontSize }: ButtonUnderlinedProps) => {
+export const ButtonUnderlined = ({
+  children,
+  fontSize,
+}: PropsWithChildren<ButtonUnderlinedProps>) => {
   return (
     <button
       className={styles.button}

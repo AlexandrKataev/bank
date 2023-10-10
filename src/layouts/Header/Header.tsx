@@ -44,7 +44,10 @@ export const Header = () => {
           <div className={styles.popup}>
             {nav.map((el) => {
               return (
-                <div className={styles.popupitem} onClick={() => onClickPopupItem(el.link)}>
+                <div
+                  className={styles.popupitem}
+                  onClick={() => onClickPopupItem(el.link)}
+                  key={el.link}>
                   {el.title}
                 </div>
               );
@@ -68,7 +71,10 @@ export const Header = () => {
               style={({ isActive }) => {
                 return { fontWeight: isActive ? 600 : 400 };
               }}
-              className={styles.menuitem}>{`${el.title}`}</NavLink>
+              className={styles.menuitem}
+              key={el.link}>
+              {`${el.title}`}{' '}
+            </NavLink>
           );
         })}
       </div>

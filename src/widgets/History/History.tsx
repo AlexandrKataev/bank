@@ -3,8 +3,8 @@ import styles from './History.module.scss';
 
 const transactions = [
   { name: 'Alina Soolina', message: 'Sent Meal Bills', date: '1696287079', total: 275, image: '' },
-  { name: 'Steam', message: 'Sent Meal Bills', date: '1696287079', total: 275, image: '' },
-  { name: 'Steam', message: 'Sent Meal Bills', date: '1696287079', total: 275, image: '' },
+  { name: 'Steam', message: 'Sent Meal Bills', date: '1696287029', total: 275, image: '' },
+  { name: 'Steam', message: 'Sent Meal Bills', date: '1696287579', total: 275, image: '' },
 ];
 
 export const History = () => {
@@ -23,7 +23,7 @@ export const History = () => {
       <div className={styles.content}>
         {transactions.map((el) => {
           return (
-            <div className={styles.item}>
+            <div className={styles.item} key={el.date}>
               <div className={styles.image}>{Array.from(el.name.matchAll(/\b\w/g)).join('')}</div>
               <div className={styles.first}>
                 <div>{el.name}</div>

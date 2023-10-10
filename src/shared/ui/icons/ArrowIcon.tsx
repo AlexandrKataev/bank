@@ -11,9 +11,9 @@ export const ArrowIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
       <path
         d="M9 5L15 12L9 19"
         stroke={'var(--color-text-gray)'}
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
