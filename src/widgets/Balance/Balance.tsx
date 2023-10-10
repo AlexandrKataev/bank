@@ -17,7 +17,7 @@ export const Balance = () => {
       <BlockTitle>Total Balance</BlockTitle>
       <div className={styles.total}>
         <span className={styles.sum}>{formatNumToCash(total)}</span>
-        <span className={styles.valute}>USD</span>
+        <span className={styles.currency}>USD</span>
       </div>
       <div className={styles.buttons}>
         <Button height={50} width={166} variant="primary" style={{ width: '33%', minWidth: '20%' }}>

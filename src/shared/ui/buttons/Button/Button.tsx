@@ -8,17 +8,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   fontSize?: number;
 }
 
-const colorTheme = {
-  primary: styles.primary,
-  secondary: styles.secondary,
-  gray: styles.gray,
-  light: styles.light,
-};
-
 export const Button = ({ width, height, variant, fontSize, children, style }: ButtonProps) => {
   return (
     <button
-      className={clsx(styles.button, colorTheme[variant])}
+      className={clsx(styles.button, styles[variant])}
       style={{
         width: `${width}px`,
         height: `${height}px`,
