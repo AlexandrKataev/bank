@@ -3,7 +3,7 @@ import styles from './Header.module.scss';
 
 import userPhoto from '@assets/user-photo.png';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { useOutsideClick } from '@hooks';
 
 const name: string = 'Alexander';
