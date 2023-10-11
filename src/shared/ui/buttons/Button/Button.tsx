@@ -8,7 +8,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   fontSize?: number;
 }
 
-export const Button = ({ width, height, variant, fontSize, children, style }: ButtonProps) => {
+export const Button = ({ width, height, variant, children, style }: ButtonProps) => {
   return (
     <button
       className={clsx(styles.button, styles[variant])}
@@ -16,7 +16,6 @@ export const Button = ({ width, height, variant, fontSize, children, style }: Bu
         width: `${width}px`,
         height: `${height}px`,
         borderRadius: `${height / 2}px`,
-        fontSize: fontSize ? `${fontSize}px` : '18px',
         ...style,
       }}>
       {children}
