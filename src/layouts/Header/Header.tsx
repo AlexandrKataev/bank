@@ -3,8 +3,8 @@ import styles from './Header.module.scss';
 
 import userPhoto from '@assets/user-photo.png';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import { useOutsideClick } from '@hooks';
+import { useEffect, useRef, useState } from 'react';
+import { useOutsideClick, useResizeScreen } from '@hooks';
 
 const name: string = 'Alexander';
 
@@ -25,10 +25,17 @@ const nav: NavLink[] = [
 export const Header = () => {
   const [popup, setPopup] = useState(false);
   const navigate = useNavigate();
+  const windowSize = useResizeScreen();
 
   const ref = useOutsideClick(() => {
     setPopup(false);
   });
+
+  useEffect(() => {
+    if (windowSize > 1200) {
+      setPopup(false);
+    }
+  }, [windowSize]);
 
   const onCLickPopup: React.MouseEventHandler<SVGSVGElement> = () => {
     setPopup(!popup);
