@@ -9,7 +9,7 @@ export const Invite = () => {
     <Block
       style={{
         minWidth: '250px',
-        flexGrow: 0.9,
+        flexGrow: 1,
         flexShrink: 15,
         backgroundImage: `url(${background})`,
         backgroundColor: 'var(--color-background-black)',
