@@ -41,7 +41,7 @@
     display: flex;
     margin-top: 40px;
     .number {
-      font-size: 25px;
+      font-size: clamp(5px, 4.2vw, 25px);
       letter-spacing: 6px;
     }
     button {
