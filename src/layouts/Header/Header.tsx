@@ -2,8 +2,8 @@ import { BurgerIcon, Logo } from '@ui';
 import styles from './Header.module.scss';
 
 import userPhoto from '@assets/user-photo.png';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { useOutsideClick, useResizeScreen } from '@hooks';
 
 const name: string = 'Alexander';
@@ -24,7 +24,6 @@ const nav: NavLink[] = [
 
 export const Header = () => {
   const [popup, setPopup] = useState(false);
-  const navigate = useNavigate();
   const windowSize = useResizeScreen();
 
   const ref = useOutsideClick(() => {
