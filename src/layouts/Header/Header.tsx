@@ -41,9 +41,8 @@ export const Header = () => {
     setPopup(!popup);
   };
 
-  const onClickPopupItem = (link: string) => {
+  const onClickPopupItem = () => {
     setPopup(false);
-    navigate(link);
   };
   return (
     <header className={styles.container}>
@@ -60,12 +59,16 @@ export const Header = () => {
           <div className={styles.popup} ref={ref}>
             {nav.map((el) => {
               return (
-                <div
+                <NavLink
                   className={styles.popupitem}
-                  onClick={() => onClickPopupItem(el.link)}
+                  onClick={() => onClickPopupItem()}
+                  style={({ isActive }) => {
+                    return { fontWeight: isActive ? 600 : 400 };
+                  }}
+                  to={el.link}
                   key={el.link}>
                   {el.title}
-                </div>
+                </NavLink>
               );
             })}
           </div>
@@ -89,7 +92,7 @@ export const Header = () => {
               }}
               className={styles.menuitem}
               key={el.link}>
-              {`${el.title}`}{' '}
+              {`${el.title}`}
             </NavLink>
           );
         })}
