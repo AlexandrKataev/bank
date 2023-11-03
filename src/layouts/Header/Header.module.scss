@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 450px auto;
   gap: var(--gap);
+  filter: blur(0.5rem);
 
   svg {
     min-width: 80px;
