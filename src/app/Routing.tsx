@@ -1,18 +1,43 @@
-import { Activity, Cards, EarnGifts, HelpCenter, Home, Recipients, SignUp, SignIn } from '@pages';
+import {
+  ActivityPage,
+  CardsPage,
+  EarnGiftsPage,
+  HelpCenterPage,
+  HomePage,
+  RecipientsPage,
+  SignUpPage,
+  SignInPage,
+} from '@pages';
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { RootState, useAppSelector } from './store/store';
+import { useRefreshMutation } from '@features/auth';
+import { useEffect } from 'react';
 
 export const Routing = () => {
+  const user = useAppSelector((state: RootState) => state.userState.user);
+  const [refresh] = useRefreshMutation();
+  useEffect(() => {
+    refresh(null);
+  }, []);
   return (
     <Routes>
-      <Route path="signup" element={<SignUp />} />
-      <Route path="signin" element={<SignIn />} />
-      <Route path="/" element={<Home />} />
-      <Route path="cards" element={<Cards />} />
-      <Route path="activity" element={<Activity />} />
-      <Route path="recipients" element={<Recipients />} />
-      <Route path="help" element={<HelpCenter />} />
-      <Route path="gifts" element={<EarnGifts />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
+      {user ? (
+        <>
+          <Route path="cards" element={<CardsPage />} />
+          <Route path="activity" element={<ActivityPage />} />
+          <Route path="recipients" element={<RecipientsPage />} />
+          <Route path="help" element={<HelpCenterPage />} />
+          <Route path="gifts" element={<EarnGiftsPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="*" element={<Navigate to="/home" replace />} />
+        </>
+      ) : (
+        <>
+          <Route path="signup" element={<SignUpPage />} />
+          <Route path="signin" element={<SignInPage />} />
+          <Route path="*" element={<Navigate to="/signup" replace />} />
+        </>
+      )}
     </Routes>
   );
 };

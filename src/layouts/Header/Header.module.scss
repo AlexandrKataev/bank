@@ -6,12 +6,16 @@
   display: grid;
   grid-template-columns: 450px auto;
   gap: var(--gap);
-  filter: blur(0.5rem);
 
   svg {
     min-width: 80px;
   }
 }
+
+.blur {
+  filter: blur(0.5rem);
+}
+
 .burger {
   cursor: pointer;
 }
@@ -45,6 +49,7 @@
 }
 
 .profile {
+  position: relative;
   padding: 0 8px;
   display: flex;
   align-items: center;
@@ -62,10 +67,38 @@
       font-size: 20px;
     }
   }
-  img {
-    width: 60px;
-    border-radius: 30px;
+  .avatar {
+    position: relative;
+
     margin-left: auto;
+    img {
+      width: 60px;
+      border-radius: 30px;
+
+      cursor: pointer;
+    }
+    .userPopup {
+      border-radius: 20px;
+      overflow: hidden;
+      font-size: 20px;
+      top: 70px;
+      left: 10px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+      box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.13);
+
+      .userPopupItem {
+        cursor: pointer;
+        padding: 25px 35px;
+        color: var(--color-text-gray);
+        background-color: rgb(255, 255, 255);
+        &:hover {
+          background-color: rgb(248, 248, 248);
+        }
+      }
+    }
   }
 }
 

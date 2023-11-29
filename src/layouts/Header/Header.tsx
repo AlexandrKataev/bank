@@ -6,15 +6,23 @@ import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useOutsideClick, useResizeScreen } from '@hooks';
 
-const name: string = 'Alexander';
+import cn from 'clsx';
+import { RootState, useAppDispatch, useAppSelector } from '../../app/store/store';
+import { logout } from '@entities/user';
+import { useLogoutMutation } from '@features/auth';
 
 interface NavLink {
   title: string;
   link: string;
 }
 
+interface UserPopupItem {
+  title: string;
+  func: () => void;
+}
+
 const nav: NavLink[] = [
-  { title: 'Summary', link: '/' },
+  { title: 'Summary', link: '/home' },
   { title: 'Cards', link: '/cards' },
   { title: 'Activity', link: '/activity' },
   { title: 'Recipients', link: '/recipients' },
@@ -24,10 +32,32 @@ const nav: NavLink[] = [
 
 export const Header = () => {
   const [popup, setPopup] = useState(false);
+  const [userPopup, setUserPopup] = useState(false);
+
+  const [logout] = useLogoutMutation();
+
+  const onLogoutHandler = async () => {
+    logout();
+  };
+
+  const userPopupItems: UserPopupItem[] = [
+    { title: 'Profile', func: () => {} },
+    {
+      title: 'Logout',
+      func: onLogoutHandler,
+    },
+  ];
+
   const windowSize = useResizeScreen();
+
+  const user = useAppSelector((state: RootState) => state.userState.user);
 
   const ref = useOutsideClick(() => {
     setPopup(false);
+  });
+
+  const refAvatar = useOutsideClick(() => {
+    setUserPopup(false);
   });
 
   useEffect(() => {
@@ -43,8 +73,16 @@ export const Header = () => {
   const onClickPopupItem = () => {
     setPopup(false);
   };
+
+  const onCLickUserPopup: React.MouseEventHandler<HTMLImageElement> = () => {
+    setUserPopup(!userPopup);
+  };
+
+  const onClickUserPopupItem = () => {
+    setUserPopup(false);
+  };
   return (
-    <header className={styles.container}>
+    <header className={cn(styles.container, !user && styles.blur)}>
       <div className={styles.header}>
         <Logo className={styles.logo} />
 
@@ -75,9 +113,28 @@ export const Header = () => {
 
         <div className={styles.profile}>
           <span className={styles.greeting}>
-            Welcome back, <b>{`${name}!`}</b>
+            Welcome back, <b>{`${user?.firstName}!`}</b>
           </span>
-          <img src={userPhoto} />
+          <div className={styles.avatar}>
+            <img src={userPhoto} onClick={onCLickUserPopup} />
+            {userPopup && (
+              <div className={styles.userPopup} ref={refAvatar}>
+                {userPopupItems.map((el) => {
+                  return (
+                    <div
+                      className={styles.userPopupItem}
+                      key={el.title}
+                      onClick={() => {
+                        onClickUserPopupItem();
+                        el.func();
+                      }}>
+                      {el.title}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
         </div>
       </div>
 

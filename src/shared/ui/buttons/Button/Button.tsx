@@ -6,12 +6,14 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   height: number;
   variant: 'primary' | 'secondary' | 'gray' | 'light';
   fontSize?: number;
+  onClick?: () => void;
 }
 
-export const Button = ({ width, height, variant, children, style }: ButtonProps) => {
+export const Button = ({ width, height, variant, children, style, onClick }: ButtonProps) => {
   return (
     <button
       className={clsx(styles.button, styles[variant])}
+      onClick={onClick}
       style={{
         width: `${width}px`,
         height: `${height}px`,

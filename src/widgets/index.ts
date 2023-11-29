@@ -4,3 +4,4 @@ export * from './CurrentCard';
 export * from './GetMoney';
 export * from './RecentContacts';
 export * from './History';
+export * from './CardsList';

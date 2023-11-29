@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  gap: 40px;
+}
+
+.card {
+  padding: 40px;
+  width: 360px;
+  height: 160px;
+  border-radius: 20px;
+  color: var(--color-text-white);
+  background-color: var(--color-background-black);
+}
+
+.name {
+  font-size: 30px;
+}
+
+.number {
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.details {
+  font-size: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}

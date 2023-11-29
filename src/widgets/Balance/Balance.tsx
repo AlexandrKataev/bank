@@ -2,10 +2,13 @@ import { formatNumToCash } from '@helpers';
 import styles from './Balance.module.scss';
 
 import { ArrowDownIcon, ArrowUpIcon, Block, BlockTitle, Button, PlusIcon } from '@ui';
-
-const total = 24579;
+import { useAppSelector } from '@app/store/store';
+import { selectCurrentCard, useGetCardsQuery } from '@entities/Card';
+import { selectUser } from '@entities/user';
 
 export const Balance = () => {
+  const user = useAppSelector(selectUser) || null;
+  const { data } = useGetCardsQuery(user?.id || null);
   return (
     <Block
       style={{
@@ -15,7 +18,7 @@ export const Balance = () => {
       }}>
       <BlockTitle>Total Balance</BlockTitle>
       <div className={styles.total}>
-        <span className={styles.sum}>{formatNumToCash(total)}</span>
+        <span className={styles.sum}>{formatNumToCash(data ? data[0].balance : 0)}</span>
         <span className={styles.currency}>USD</span>
       </div>
       <div className={styles.buttons}>
